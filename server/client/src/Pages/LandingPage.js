@@ -156,7 +156,7 @@ export default function Blog() {
             New Hope Community Services
           </Typography>
           <Button variant="outlined" size="small">
-            Sign up
+            Admin Login
           </Button>
         </Toolbar>
 
