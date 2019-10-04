@@ -196,7 +196,7 @@ export default function Blog() {
           <Grid container spacing={4}>
             {featuredPosts.map(post => (
               <Grid item key={post.title} xs={12} md={12}>
-                <CardActionArea component="a" href="#">
+                <CardActionArea component="a" href="">
                   <Card className={classes.card}>
                     <div className={classes.cardDetails}>
                       <CardContent>
@@ -209,7 +209,7 @@ export default function Blog() {
                         <Typography variant="subtitle1" paragraph>
                           {post.description}
                         </Typography>
-                        <Typography variant="subtitle1" color="primary">
+                        <Typography variant="subtitle1" color="secondary">
                           Take Action Now
                         </Typography>
                       </CardContent>
@@ -233,7 +233,7 @@ export default function Blog() {
       <footer className={classes.footer}>
         <Container maxWidth="lg">
           <Typography variant="h6" align="center" gutterBottom>
-            Footer
+          New Hope Community Services
           </Typography>
           <Typography
             variant="subtitle1"
@@ -241,8 +241,6 @@ export default function Blog() {
             color="textSecondary"
             component="p"
           >
-            New Hope Community Services |
-
             Blk 148 Yishun Street 11 
 
             Singapore 760148, #01-123
