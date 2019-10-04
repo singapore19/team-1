@@ -54,7 +54,7 @@ export default function Dashboard() {
                 <VisibilityIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Total number of sightings</p>
-              <h3 className={classes.cardTitle}>24</h3>
+              <h3 className={classes.cardTitle}>240</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>Sleepers in Singapore</div>
@@ -70,7 +70,7 @@ export default function Dashboard() {
               <p className={classes.cardCategory}>
                 Total number of sleepers assisted
               </p>
-              <h3 className={classes.cardTitle}>98</h3>
+              <h3 className={classes.cardTitle}>110</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -86,7 +86,7 @@ export default function Dashboard() {
                 <Accessibility />
               </CardIcon>
               <p className={classes.cardCategory}>Total number of volunteers</p>
-              <h3 className={classes.cardTitle}>300</h3>
+              <h3 className={classes.cardTitle}>50</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
