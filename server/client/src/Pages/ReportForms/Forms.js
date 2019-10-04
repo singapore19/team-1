@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const steps = ['Verify','Community details', 'Review'];
+const steps = ['Verify','Report details'];
 
 export default function Forms(props) {
   const classes = useStyles();
@@ -101,11 +101,16 @@ export default function Forms(props) {
                   THANK YOU! Your report has been submitted!
                 </Typography>
                 <Typography variant="subtitle1">
-                  some details here
+                  Your help is greatly appreciated. Together, we can provide HOPE to displaced inviduals and families.
+                  We have events organised to send hope and help to these people in need. Sign up as volunteer or learn more now.
                 </Typography>
                 <Button className={classes.button}variant="contained"
                     color="primary">
-                      
+                      Sign up as a volunteer
+                    </Button>
+                  <Button className={classes.button}variant="contained"
+                    color="primary">
+                      Button to analytics 
                     </Button>
               </React.Fragment>
             ) : (
