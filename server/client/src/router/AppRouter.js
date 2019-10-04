@@ -14,7 +14,7 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-      {/* <PublicRoute path="/ReportForms/Forms" component={Forms} exact={true} /> */}
+      <PublicRoute path="/" component={Forms} exact={true} />
         {/* <PublicRoute path="/" component={Default} exact={true} />
         <PublicRoute path="/report" component={DefaultTwo} exact={true} /> */}
       </Switch>

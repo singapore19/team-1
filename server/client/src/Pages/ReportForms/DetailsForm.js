@@ -1,11 +1,8 @@
 import React,{useState} from 'react';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+import {Typography,MenuItem,TextField,FormControl,FormControlLabel,Checkbox,InputLabel,Select} from '@material-ui/core';
 
 import Button from '@material-ui/core/Button';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 
@@ -33,11 +30,12 @@ export default function DetailsForm() {
         <FormControlLabel control={<Checkbox value="checkedC" />} label="M" />
         <FormControlLabel control={<Checkbox value="checkedC" />} label="F" />
         <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
-        <FormControl className={classes.formControl}>
+        <FormControl >
+          {/* className={classes.formControl}> */}
           <InputLabel htmlFor="age-simple">Age</InputLabel>
           <Select
-            value={values.age}
-            onChange={handleChange}
+            // value={values.age}
+            // onChange={handleChange}
             inputProps={{
               name: 'age',
               id: 'age-simple',
