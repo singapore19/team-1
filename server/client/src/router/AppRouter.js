@@ -4,6 +4,7 @@ import PublicRoute from './PublicRoute';
 
 
 import createHistory from "history/createBrowserHistory";
+import Forms from '../Pages/ReportForms/Forms';
 
 export const history=createHistory();
 
@@ -13,6 +14,7 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
+      {/* <PublicRoute path="/ReportForms/Forms" component={Forms} exact={true} /> */}
         {/* <PublicRoute path="/" component={Default} exact={true} />
         <PublicRoute path="/report" component={DefaultTwo} exact={true} /> */}
       </Switch>

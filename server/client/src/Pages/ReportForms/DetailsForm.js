@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
-import FileUpload from '../upload/FileUpload'
+
 
 // export default function DetailsForm({info,modifyInfo}) {
 //   const setName = newname => {
@@ -24,9 +24,16 @@ export default function DetailsForm() {
     return (
       <React.Fragment>
         <Typography variant="h6" gutterBottom>
-          Shipping address
+          Rough Sleepers Sightings
         </Typography>
         <Grid container spacing={3}>
+        <Typography variant="h9" gutterBottom>
+          Gender
+        </Typography>
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="M" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="F" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
+
           <Grid item xs={12} sm={6}>
             <TextField
               required

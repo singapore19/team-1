@@ -2,9 +2,9 @@ import React,{useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline,AppBar,Toolbar,Paper,Stepper,Step,StepLabel,Button,Link,Typography} from '@material-ui/core';
 import { flexbox } from '@material-ui/system';
-import Review from './Review';
+// import Review from './Review';
 import DetailsForm from './DetailsForm';
-
+import Verify from './Verify'
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: 'relative',
@@ -43,9 +43,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const steps = ['Community details', 'Review'];
+const steps = ['Verify','Community details', 'Review'];
 
-export default function CreateCommunity(props) {
+export default function Forms(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
 //   const [info,setInfo]= useState({
@@ -60,9 +60,11 @@ export default function CreateCommunity(props) {
   const getStepContent= step =>{
     switch (step) {
       case 0:
-        return <DetailsForm />;
+        return <Verify />;
       case 1:
-        return <Review info={info} />;
+        return <DetailsForm />;
+      // case 2:
+      //   return <Review  />;
       default:
         throw new Error('Unknown step');
     }
@@ -99,7 +101,7 @@ export default function CreateCommunity(props) {
                   THANK YOU! Your report has been submitted!
                 </Typography>
                 <Typography variant="subtitle1">
-                  some details her
+                  some details here
                 </Typography>
                 <Button className={classes.button}variant="contained"
                     color="primary">
