@@ -20,111 +20,172 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 export default function DetailsForm() {
     return (
       <React.Fragment>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h4" gutterBottom>
           Rough Sleepers Sightings
         </Typography>
-        <Grid container spacing={3}>
-        <Typography variant="h9" gutterBottom>
-          Gender
+        <Typography variant="h6" gutterBottom>
+          Location Sighted:
         </Typography>
-        <FormControlLabel control={<Checkbox value="checkedC" />} label="M" />
-        <FormControlLabel control={<Checkbox value="checkedC" />} label="F" />
-        <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
         <FormControl >
           {/* className={classes.formControl}> */}
-          <InputLabel htmlFor="age-simple">Age</InputLabel>
+          {/* <InputLabel htmlFor="age-simple">Location</InputLabel> */}
           <Select
+            style={{ width: 400}}
             // value={values.age}
             // onChange={handleChange}
             inputProps={{
-              name: 'age',
+              name: 'Location',
               id: 'age-simple',
             }}
           >
-            <MenuItem value={0-12}>Ten</MenuItem>
-            <MenuItem value={13-18}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={'bi'}>Bishan</MenuItem>
+            <MenuItem value={'je'}>Jurong East</MenuItem>
+            <MenuItem value={'jw'}>Jurong West</MenuItem>
+            <MenuItem value={'amk'}>Ang Mo Kio</MenuItem>
+            <MenuItem value={'changi'}>Changi</MenuItem>
+            <MenuItem value={'pr'}>Pasir Ris</MenuItem>
+            
           </Select>
       </FormControl>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="firstName"
-              name="firstName"
-              label="First name"
-              fullWidth
-              autoComplete="fname"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+      <p> </p>
+      <Grid item xs={12} >
             <TextField
               required
               id="lastName"
               name="lastName"
-              label="Last name"
+              label="Please describe the exact location as detailed as possible,"
               fullWidth
-              autoComplete="lname"
+            />
+            <TextField
+              required
+              id="lastName"
+              name="lastName"
+              label='eg the surroundings, level of building'
+              fullWidth
             />
           </Grid>
+          <p> </p>
+          <p> </p>
+
+        <Typography variant="h6" gutterBottom>
+          Time sighted:
+        </Typography>
+
+        <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              fullWidth
+              placeholder= "HH:MM AM/PM"
+            />
+        </Grid>
+        
+
+      <p></p>
+        <Typography variant="h6" gutterBottom>
+          Gender:
+        </Typography>
+        <p></p>
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="M" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="F" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
+        <p></p>
+        <Typography variant="h6" gutterBottom>
+          Age:
+        </Typography>
+        <FormControl >
+          {/* className={classes.formControl}> */}
+          {/* <InputLabel htmlFor="age-simple">Age</InputLabel> */}
+          <Select
+            // value={values.age}
+            // onChange={handleChange}
+            style={{ width: 400}}
+            inputProps={{
+              name: 'Age',
+              id: 'age-simple',
+            }}
+          >
+            <MenuItem value={0-12}>Child(0-12)</MenuItem>
+            <MenuItem value={13-18}>Adolescence (13-18)</MenuItem>
+            <MenuItem value={19-59}>Adult (19-59)</MenuItem>
+            <MenuItem value={60}>Senior Adult (>60)</MenuItem>
+          </Select>
+      </FormControl>
+      <p></p>
+        <Typography variant="h6" gutterBottom>
+          Race:
+        </Typography>
+        <FormControl >
+          {/* className={classes.formControl}> */}
+          {/* <InputLabel htmlFor="age-simple">Race</InputLabel> */}
+          <Select
+            style={{ width: 400}}
+            // value={values.age}
+            // onChange={handleChange}
+            inputProps={{
+              name: 'Race',
+              id: 'age-simple',
+            }}
+          >
+            <MenuItem value={'ch'}>Chinese</MenuItem>
+            <MenuItem value={'ml'}>Malay</MenuItem>
+            <MenuItem value={'in'}>Indian</MenuItem>
+            <MenuItem value={'oth'}>Caucasian</MenuItem>
+            <MenuItem value={'oth'}>Others</MenuItem>
+            
+          </Select>
+      </FormControl>
+      <p></p>
+      <Typography variant="h6" gutterBottom>
+          Appearance:
+        </Typography>
           <Grid item xs={12}>
             <TextField
               required
               id="address1"
               name="address1"
-              label="Address line 1"
+              // label="Clothing"
+              placeholder="eg. long hair with blue shirt and black pants"
               fullWidth
-              autoComplete="billing address-line1"
             />
           </Grid>
+          <p></p>
+
+          <Typography variant="h6" gutterBottom>
+          Hygiene:
+        </Typography>
+        <p></p>
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Clean" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Acceptable" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Dirty" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Very Dirty" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
+        <p></p>
+        <p></p>
+
+          <Typography variant="h6" gutterBottom>
+          Amount of belongings that sleepers have:
+        </Typography>
+        <p></p>
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="None" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Little" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Normal" />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="A lot  " />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
+          <p></p> 
+        <Typography variant="h9" gutterBottom>
+          Please describe the belongings to help us easily identify the sleepers
+        </Typography>
+          
           <Grid item xs={12}>
-            <TextField
-              id="address2"
-              name="address2"
-              label="Address line 2"
-              fullWidth
-              autoComplete="billing address-line2"
-            />
+            <TextField id="state" name="state" placeholder="eg. blue tent with a small black bag" fullWidth />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="city"
-              name="city"
-              label="City"
-              fullWidth
-              autoComplete="billing address-level2"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField id="state" name="state" label="State/Province/Region" fullWidth />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="zip"
-              name="zip"
-              label="Zip / Postal code"
-              fullWidth
-              autoComplete="billing postal-code"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="country"
-              name="country"
-              label="Country"
-              fullWidth
-              autoComplete="billing country"
-            />
-          </Grid>
+        <p> </p>
           <Grid item xs={12}>
             <FormControlLabel
               control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
               label="Use this address for payment details"
             />
           </Grid>
-        </Grid>
       </React.Fragment>
     );
   }

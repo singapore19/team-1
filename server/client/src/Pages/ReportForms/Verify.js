@@ -10,7 +10,7 @@ export default function Verify() {
     const [send, setSend] = useState(false);
     return (
       <React.Fragment>
-          <Grid  justify="center" alignItems="center" >
+        <Grid  justify="center" alignItems="center" >
         <Typography variant="h4" >
           Please enter your phone number to obatin an OTP
         </Typography>
