@@ -21,6 +21,7 @@ import post1 from "./blog-post.1.md";
 import post2 from "./blog-post.2.md";
 import post3 from "./blog-post.3.md";
 import Poster from "../assets/poster.jpg";
+import Logo from "../assets/logo.jpg"
 
 function Copyright() {
   return (
@@ -57,7 +58,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    height: 400
+    height: 300
   },
 
   mainFeaturedPostContent: {
@@ -100,16 +101,19 @@ const useStyles = makeStyles(theme => ({
 
 const featuredPosts = [
   {
-    title: "Featured post",
-    date: "Nov 12",
+    title: "Report",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
+      "Reporting helps us to reach out to and provide neccesarry support to rough sleepers."
   },
   {
-    title: "Post title",
-    date: "Nov 11",
+    title: "Sign up",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
+      "Sign up here if you are keen on helping us to get rough sleepers off the streets!"
+  },
+  {
+    title: "Donate!",    
+    description:
+      "Sign up here if you are keen on helping us to get rough sleepers off the streets!"
   }
 ];
 
@@ -142,11 +146,12 @@ export default function Blog() {
         <Toolbar className={classes.toolbar}>
           <Typography
             component="h2"
-            variant="h5"
+            variant="h3"
             color="inherit"
             align="center"
             noWrap
             className={classes.toolbarTitle}
+            
           >
             New Hope Community Services
           </Typography>
@@ -190,7 +195,7 @@ export default function Blog() {
           {/* Sub featured posts */}
           <Grid container spacing={4}>
             {featuredPosts.map(post => (
-              <Grid item key={post.title} xs={12} md={6}>
+              <Grid item key={post.title} xs={12} md={12}>
                 <CardActionArea component="a" href="#">
                   <Card className={classes.card}>
                     <div className={classes.cardDetails}>
@@ -205,14 +210,14 @@ export default function Blog() {
                           {post.description}
                         </Typography>
                         <Typography variant="subtitle1" color="primary">
-                          Continue reading...
+                          Take Action Now
                         </Typography>
                       </CardContent>
                     </div>
                     <Hidden xsDown>
                       <CardMedia
                         className={classes.cardMedia}
-                        image="https://source.unsplash.com/random"
+                        image= {Logo}
                         title="Image title"
                       />
                     </Hidden>
@@ -236,7 +241,11 @@ export default function Blog() {
             color="textSecondary"
             component="p"
           >
-            Something here to give the footer a purpose!
+            New Hope Community Services |
+
+            Blk 148 Yishun Street 11 
+
+            Singapore 760148, #01-123
           </Typography>
           <Copyright />
         </Container>
