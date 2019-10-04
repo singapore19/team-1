@@ -5,10 +5,15 @@
   "dependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
+    "classnames": "^2.2.6",
+    "google-map-react": "^1.1.5",
     "markdown-to-jsx": "^6.10.3",
     "react": "^16.10.2",
+    "react-bubble": "^1.0.5",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-modal": "^3.10.1",
+    "react-scripts": "3.2.0",
+    "victory": "^33.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -21,7 +21,8 @@ import post1 from "./blog-post.1.md";
 import post2 from "./blog-post.2.md";
 import post3 from "./blog-post.3.md";
 import Poster from "../assets/poster.jpg";
-import Logo from "../assets/logo.jpg"
+import Logo from "../assets/logo.jpg";
+import { Link as RouterLink, Redirect, withRouter } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -111,7 +112,7 @@ const featuredPosts = [
       "Sign up here if you are keen on helping us to get rough sleepers off the streets!"
   },
   {
-    title: "Donate!",    
+    title: "Donate!",
     description:
       "Sign up here if you are keen on helping us to get rough sleepers off the streets!"
   }
@@ -151,7 +152,6 @@ export default function Blog() {
             align="center"
             noWrap
             className={classes.toolbarTitle}
-            
           >
             New Hope Community Services
           </Typography>
@@ -181,12 +181,13 @@ export default function Blog() {
                     variant="h3"
                     color="inherit"
                     gutterBottom
-                  >
-                  </Typography>
-                  <Typography variant="h5" color="inherit" paragraph>
-                  </Typography>
-                  <Link variant="subtitle1" href="#">
-                  </Link>
+                  ></Typography>
+                  <Typography
+                    variant="h5"
+                    color="inherit"
+                    paragraph
+                  ></Typography>
+                  <Link variant="subtitle1" href="#"></Link>
                 </div>
               </Grid>
             </Grid>
@@ -209,15 +210,15 @@ export default function Blog() {
                         <Typography variant="subtitle1" paragraph>
                           {post.description}
                         </Typography>
-                        <Typography variant="subtitle1" color="secondary">
-                          Take Action Now
+                        <Typography variant="subtitle1" color="primary">
+                          <RouterLink to="/report">Take Action Now</RouterLink>
                         </Typography>
                       </CardContent>
                     </div>
                     <Hidden xsDown>
                       <CardMedia
                         className={classes.cardMedia}
-                        image= {Logo}
+                        image={Logo}
                         title="Image title"
                       />
                     </Hidden>
