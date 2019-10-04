@@ -33,7 +33,21 @@ export default function DetailsForm() {
         <FormControlLabel control={<Checkbox value="checkedC" />} label="M" />
         <FormControlLabel control={<Checkbox value="checkedC" />} label="F" />
         <FormControlLabel control={<Checkbox value="checkedC" />} label="Not Sure" />
-
+        <FormControl className={classes.formControl}>
+          <InputLabel htmlFor="age-simple">Age</InputLabel>
+          <Select
+            value={values.age}
+            onChange={handleChange}
+            inputProps={{
+              name: 'age',
+              id: 'age-simple',
+            }}
+          >
+            <MenuItem value={0-12}>Ten</MenuItem>
+            <MenuItem value={13-18}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+      </FormControl>
           <Grid item xs={12} sm={6}>
             <TextField
               required
