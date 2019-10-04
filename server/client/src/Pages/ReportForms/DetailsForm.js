@@ -46,18 +46,19 @@ export default function DetailsForm() {
             <MenuItem value={'pr'}>Pasir Ris</MenuItem>
             
           </Select>
+        
       </FormControl>
       <p> </p>
       <Grid item xs={12} >
             <TextField
-              required
+              
               id="lastName"
               name="lastName"
               label="Please describe the exact location as detailed as possible,"
               fullWidth
             />
             <TextField
-              required
+              
               id="lastName"
               name="lastName"
               label='eg the surroundings, level of building'
@@ -180,10 +181,32 @@ export default function DetailsForm() {
             <TextField id="state" name="state" placeholder="eg. blue tent with a small black bag" fullWidth />
           </Grid>
         <p> </p>
+        <Typography variant="h6" gutterBottom>
+          Additional Info:
+        </Typography>
+        <FormControlLabel
+              control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
+              label="The sleeper has obvious injuries"
+            />
+          <FormControlLabel
+              control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
+              label="Urgent help is needed"
+            />
+            <Typography variant="h6" gutterBottom>
+          Additional Remarks:
+        </Typography>
+            <TextField id="state" name="state" placeholder="Please tell us more so we can send more directed help." fullWidth />
+
+
+
           <Grid item xs={12}>
             <FormControlLabel
               control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-              label="Use this address for payment details"
+              label="Contact me if more details are needed"
+            />
+            <FormControlLabel
+              control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
+              label="Update me with the follow up"
             />
           </Grid>
       </React.Fragment>
