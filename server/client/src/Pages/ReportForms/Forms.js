@@ -134,7 +134,10 @@ export default function Forms(props) {
                   variant="contained"
                   color="primary"
                 >
-                  <Link to="/dashboard">
+                  <Link
+                    to="/dashboard"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
                     View analysis on Singapore's homeless scene
                   </Link>
                 </Button>
